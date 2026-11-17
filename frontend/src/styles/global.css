@@ -1,0 +1,30 @@
+:root {
+  --blue-900: #086ac5;   /* panel de bienvenida */
+  --blue-600: #1675d1;   /* acciones primarias */
+  --blue-700: #1062b5;
+  --ink: #23374d;        /* texto principal */
+  --muted: #748398;      /* texto secundario */
+  --border: #e5ebf2;
+  --border-strong: #c8d3e0;
+  --danger: #d93f3f;
+  --danger-bg: #fdeeee;
+  --info-bg: #eaf3fd;
+  --font: 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; }
+img { max-width: 100%; display: block; }
+:focus-visible { outline: 2px solid var(--blue-600); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
