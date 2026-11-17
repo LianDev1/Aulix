@@ -1,0 +1,11 @@
+﻿node_modules/
+dist/
+.env
+.env.local
+target/
+*.log
+application.properties
+application.yml
+.idea/
+.vscode/
+.DS_Store
