@@ -1,0 +1,48 @@
+.section-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.section-head h2 { margin: 0; font-size: 19px; font-weight: 800; color: var(--ink); }
+.section-head a { font-size: 15px; font-weight: 700; color: var(--blue-600); text-decoration: none; }
+.section-head a:hover { text-decoration: underline; }
+
+.app__content > section + section { margin-top: 0; }
+.app__content > section:first-of-type { margin-bottom: 4px; }
+
+/* ---------- Tarjetas de clase ---------- */
+.classes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 8px; }
+.class-card { --c-bg: var(--blue-50); --c-fg: var(--blue-600); background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.class-card--green { --c-bg: var(--green-50); --c-fg: var(--green-700); }
+.class-card--purple { --c-bg: var(--purple-50); --c-fg: var(--purple-700); }
+.class-card__cover { height: 82px; padding: 18px; display: flex; align-items: center; justify-content: space-between; background: var(--c-bg); color: var(--c-fg); }
+.class-card__cover svg { opacity: 0.8; }
+.class-card__formula { font-size: 32px; font-weight: 800; line-height: 1.4; }
+.class-card__info { display: flex; flex-direction: column; gap: 10px; padding: 16px; font-size: 15px; line-height: 1.4; color: #0b0b0c; }
+.class-card__info p { margin: 0; }
+.class-card__row { display: flex; align-items: flex-start; justify-content: space-between; }
+.class-card__name { margin: 0; font-size: 15px; font-weight: 800; color: var(--ink); }
+.class-card__footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border); font-size: 12px; font-weight: 700; color: var(--c-fg); }
+.class-card__footer a { color: var(--c-fg); display: grid; }
+
+/* ---------- Actividad ---------- */
+.feed { background: #fff; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.feed__composer { display: flex; align-items: center; gap: 12px; padding: 18px; border-bottom: 1px solid var(--border); }
+.feed__input { flex: 1; min-width: 0; height: 40px; padding: 0 14px; border: 1px solid transparent; border-radius: 8px; background: var(--bg); font-size: 15px; color: var(--ink); outline: 0; }
+.feed__input::placeholder { color: #0b0b0c; opacity: 0.85; }
+.feed__input:focus { border-color: var(--blue-600); background: #fff; }
+.feed__image { color: var(--blue-600); padding: 2px; }
+.feed__item { display: flex; align-items: center; gap: 12px; padding: 18px; }
+.feed__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.feed__title { margin: 0; font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.4; }
+.feed__detail { margin: 0; font-size: 15px; color: #0b0b0c; line-height: 1.4; }
+.feed__check { flex-shrink: 0; color: var(--green-700); }
+
+/* ---------- Estados de carga / error ---------- */
+.skeleton { border-radius: 14px; background: linear-gradient(90deg, #e9eef5 25%, #f4f7fb 50%, #e9eef5 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
+.skeleton--card { height: 220px; }
+.skeleton--feed { height: 120px; margin-top: 24px; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.app__content .alert { align-items: center; }
+.app__content .alert .btn { margin-left: auto; }
+
+@media (max-width: 600px) {
+  .page-date { font-size: 13px; }
+  .feed__item, .feed__composer { padding: 14px; }
+}
